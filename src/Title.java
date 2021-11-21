@@ -1,7 +1,15 @@
+import com.google.gson.annotations.SerializedName;
+
 public class Title {
     private String romanji;
     private String english;
-    private String nativ;
+    @SerializedName("native") private String nativeLenguage;
+
+    public Title(String romanji, String english, String nativeLenguage) {
+        this.romanji = romanji;
+        this.english = english;
+        this.nativeLenguage = nativeLenguage;
+    }
 
     public String getRomanji() {
         return romanji;
@@ -11,7 +19,7 @@ public class Title {
         return english;
     }
 
-    public String getNativ() {
-        return nativ;
+    public String getNativeLenguage() {
+        return nativeLenguage;
     }
 }
